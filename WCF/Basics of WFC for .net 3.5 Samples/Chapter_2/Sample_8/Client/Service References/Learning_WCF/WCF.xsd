@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Service" elementFormDefault="qualified" targetNamespace="http://Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Header" nillable="true" type="xs:string" />
+</xs:schema>
