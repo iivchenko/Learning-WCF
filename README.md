@@ -84,3 +84,9 @@ Message contract
 
 Server - app config 
 Client - proxy generator
+
+# Projects
+
+## Chat
+
+Just a stupid client server chat
