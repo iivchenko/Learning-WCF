@@ -137,10 +137,10 @@ makecert.exe -n "CN=RootCATest" -r -sv C:\RootCATest.pvk C:\RootCATest.cer
 Add RootCATest certificate to a Client and Server machines to "Trusted Root Certification Authorities"
 
 On a server machine generate server cetificate
-makecert -sk MyServer C:\RootCATest.cer -sr localmachine -ss my -sky exchange -pe
+```makecert -sk MyServer C:\RootCATest.cer -sr localmachine -ss my -sky exchange -pe```
 
-Bind server certificate on the Server (netsh http add sslcert ipport=ip:port certhash=<cert thumbprint> appid="<your app id>"
-netsh http add sslcert ipport=0.0.0.0:8002 certhash=<FIND IT> appid="{5ee247fe-720c-469c-834a-66dde49bcdf2}"
+Bind server certificate on the Server
+```netsh http add sslcert ipport=0.0.0.0:8002 certhash=<FIND IT> appid="{5ee247fe-720c-469c-834a-66dde49bcdf2}"```
 
 Run the Server and the Client 
 
