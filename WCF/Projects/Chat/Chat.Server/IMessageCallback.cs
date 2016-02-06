@@ -4,7 +4,7 @@ namespace Chat.Server
 {
     internal interface IMessageCallback : ICommunicationObject
     {
-        [OperationContract]
+        [OperationContract(Name="Receive")]
         void Send(Message message);
     }
 }

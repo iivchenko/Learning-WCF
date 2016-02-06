@@ -25,7 +25,8 @@ namespace Chat.Server
                 }
 
                 var client = OperationContext.Current.GetCallbackChannel<IMessageCallback>();
-                
+                          
+
                 client.Closed+= OnClosed;
 
                 _clients.Add(request.Name, client);

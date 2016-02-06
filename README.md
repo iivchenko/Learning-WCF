@@ -85,6 +85,67 @@ Message contract
 Server - app config 
 Client - proxy generator
 
+## Chapter 5
+
+### Sample 1
+
+Behaviors 
+InstanceContextMode = InstanceContextMode.PerSession
+ConcurrencyMode = ConcurrencyMode.Single
+
+### Sample 2
+
+Behaviors 
+InstanceContextMode = InstanceContextMode.Single
+ConcurrencyMode = ConcurrencyMode.Multiple
+
+### Sample 3
+
+Behaviors 
+InstanceContextMode = InstanceContextMode.Single
+ConcurrencyMode = ConcurrencyMode.Single
+
+### Sample 4
+
+Behaviors 
+InstanceContextMode = InstanceContextMode.PerSession
+ConcurrencyMode = ConcurrencyMode.Multiple
+
+### Sample 5
+
+Behaviors - Transaction
+InstanceContextMode = InstanceContextMode.PerSession
+ConcurrencyMode = ConcurrencyMode.Single
+Also TransactionalCollection is implemented to show transaction work more deeply.
+
+### Sample 6
+
+Custom Service Behavior using config file.
+
+### Sample 7
+
+Streamed type to send serialized data contract
+
+## Chapter 8
+
+### Sample 1
+
+**Security. X.509 certificates + SSL**
+Generate Server and Client certificate
+makecert.exe -n "CN=RootCATest" -r -sv C:\RootCATest.pvk C:\RootCATest.cer
+
+Add RootCATest certificate to a Client and Server machines to "Trusted Root Certification Authorities"
+
+On a server machine generate server cetificate
+makecert -sk MyServer C:\RootCATest.cer -sr localmachine -ss my -sky exchange -pe
+
+Bind server certificate on the Server (netsh http add sslcert ipport=ip:port certhash=<cert thumbprint> appid="<your app id>"
+netsh http add sslcert ipport=0.0.0.0:8002 certhash=<FIND IT> appid="{5ee247fe-720c-469c-834a-66dde49bcdf2}"
+
+Run the Server and the Client 
+
+[Brief article](https://msdn.microsoft.com/en-us/library/ff648498.aspx?f=255&MSPPError=-2147217396)
+
 # Projects
 
 ## Chat
