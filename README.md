@@ -131,8 +131,9 @@ Streamed type to send serialized data contract
 ### Sample 1
 
 **Security. X.509 certificates + SSL**
+
 Generate Server and Client certificate
-makecert.exe -n "CN=RootCATest" -r -sv C:\RootCATest.pvk C:\RootCATest.cer
+```makecert.exe -n "CN=RootCATest" -r -sv C:\RootCATest.pvk C:\RootCATest.cer```
 
 Add RootCATest certificate to a Client and Server machines to "Trusted Root Certification Authorities"
 
