@@ -147,6 +147,18 @@ Run the Server and the Client
 
 [Brief article](https://msdn.microsoft.com/en-us/library/ff648498.aspx?f=255&MSPPError=-2147217396)
 
+## Chapter 9
+
+### Sample 1
+
+Diagnostics. Turn on Message logging, turn on trace, create own trace source.
+
+## Chapter 10
+
+### Sample 1
+
+Faults. Using FaultException and FaultException<T>
+
 # Projects
 
 ## Chat
